@@ -14,13 +14,16 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
+    - name: Setup Git config
+      run: |
+        git config user.name "github-actions"
+        git config user.email "github-actions@github.com"
+
     - name: Generate Packages.gz for CA
       run: |
         cd ca
         dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git add ca/Packages.gz
+        git add Packages.gz
         git commit -m "Update CA Packages.gz"
         git push
 
@@ -28,8 +31,6 @@ jobs:
       run: |
         cd vpn_server
         dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
-        git config user.name github-actions
-        git config user.email github-actions@github.com
-        git add vpn_server/Packages.gz
+        git add Packages.gz
         git commit -m "Update VPN Server Packages.gz"
         git push
