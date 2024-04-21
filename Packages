@@ -4,7 +4,7 @@ Architecture: all
 Maintainer: Arina <sav2405@gmail.com>
 Installed-Size: 13
 Depends: easy-rsa
-Filename: ./ca_1.0-3_all.deb
+Filename: ca_1.0-3_all.deb
 Size: 2448
 MD5sum: 88d99fab937f278de2df514eb1251d8f
 SHA1: 145a7ae15a0a0ea0132a4e9736bec11c089f41e5
