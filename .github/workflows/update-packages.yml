@@ -21,7 +21,7 @@ jobs:
 
     - name: Generate Packages.gz
       run: |
-        dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
+        dpkg-scanpackages . /dev/null | sed 's|./||' | gzip -9c > Packages.gz
         git add Packages.gz
         git commit -m "Update Packages.gz"
         git push
