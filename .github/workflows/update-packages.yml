@@ -19,18 +19,9 @@ jobs:
         git config user.name "github-actions"
         git config user.email "github-actions@github.com"
 
-    - name: Generate Packages.gz for CA
+    - name: Generate Packages.gz
       run: |
-        cd ca
         dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
         git add Packages.gz
-        git commit -m "Update CA Packages.gz"
-        git push
-
-    - name: Generate Packages.gz for VPN Server
-      run: |
-        cd vpn_server
-        dpkg-scanpackages . /dev/null | gzip -9c > Packages.gz
-        git add Packages.gz
-        git commit -m "Update VPN Server Packages.gz"
+        git commit -m "Update Packages.gz"
         git push
