@@ -1,0 +1,9 @@
+title: My Debian Repository
+description: This is my personal Debian package repository hosted on GitHub Pages.
+baseurl: ""
+url: "https://arinazaikina.github.io/azaikina-deb-repo"
+theme: minima
+
+markdown: kramdown
+plugins:
+  - jekyll-feed
