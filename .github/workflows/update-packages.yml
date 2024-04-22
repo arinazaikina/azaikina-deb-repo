@@ -28,7 +28,8 @@ jobs:
 
     - name: Генерация и подписание файла Packages
       run: |
-        dpkg-scanpackages --multiversion . > Packages
+        dpkg-scanpackages --multiversion . /dev/null | tee Packages
+        cat Packages
         rm -f Packages.gpg
         gpg --batch --pinentry-mode loopback --default-key ${{ secrets.GPG_KEY_ID }} --output Packages.gpg --detach-sign Packages
         git add Packages Packages.gpg
