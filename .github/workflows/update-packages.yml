@@ -32,22 +32,15 @@ jobs:
         cat Packages
         rm -f Packages.gpg
         gpg --batch --pinentry-mode loopback --default-key ${{ secrets.GPG_KEY_ID }} --output Packages.gpg --detach-sign Packages
-        git add Packages Packages.gpg
 
     - name: Генерация и подписание файла Release
       run: |
         apt-ftparchive release . > Release
         rm -f Release.gpg
         gpg --batch --pinentry-mode loopback --default-key ${{ secrets.GPG_KEY_ID }} --output Release.gpg --detach-sign Release
-        git add Release Release.gpg
 
-    - name: Проверка наличия изменений
-      id: git-check
+    - name: Фиксация изменений и публикация в репозиторий
       run: |
-        git diff --exit-code || echo "changes=yes" >> $GITHUB_ENV
-
-    - name: Коммит и пуш изменений, если они есть
-      if: env.changes == 'yes'
-      run: |
-        git commit -m "Обновление файлов Packages и Release"
-        git push
+        git add .
+        git commit -am "Автоматическое обновление файлов Packages и Release" || echo "Нет изменений для коммита."
+        git push origin main --force-with-lease
