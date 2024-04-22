@@ -71,6 +71,24 @@ Description: Easy-RSA CA management scripts
  certificate authority for local VPN or other security systems.
 
 Package: ca
+Version: 1.0-14
+Architecture: all
+Maintainer: Arina <sav2405@gmail.com>
+Installed-Size: 13
+Depends: easy-rsa
+Filename: ./ca_1.0-14_all.deb
+Size: 2794
+MD5sum: 1301246c722318b3d334cc7fad57e48e
+SHA1: 0303eb2142951de2759cf1fe27d33771541270d3
+SHA256: e349b589d66140cddf4efbe30e7922788c9d3d07f796b112543bdf66a876f9ff
+Section: utils
+Priority: optional
+Description: Easy-RSA CA management scripts
+ CA (Certificate Authority) management utility scripts to handle
+ PKI infrastructure. This package provides tools to manage the
+ certificate authority for local VPN or other security systems.
+
+Package: ca
 Version: 1.0-3
 Architecture: all
 Maintainer: Arina <sav2405@gmail.com>
