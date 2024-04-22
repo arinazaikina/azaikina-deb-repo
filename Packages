@@ -1,4 +1,76 @@
 Package: ca
+Version: 1.0-10
+Architecture: all
+Maintainer: Arina <sav2405@gmail.com>
+Installed-Size: 13
+Depends: easy-rsa
+Filename: ./ca_1.0-10_all.deb
+Size: 2766
+MD5sum: 140f4f559c969689c4b1df13e08fc2eb
+SHA1: be0a81395c5c4c4c0fe14bab3ac7fc397e5e17c2
+SHA256: 0f1908d50774f13a58e5aada11ed402adf5a1302f2cf43d94503fe69f11528be
+Section: utils
+Priority: optional
+Description: Easy-RSA CA management scripts
+ CA (Certificate Authority) management utility scripts to handle
+ PKI infrastructure. This package provides tools to manage the
+ certificate authority for local VPN or other security systems.
+
+Package: ca
+Version: 1.0-11
+Architecture: all
+Maintainer: Arina <sav2405@gmail.com>
+Installed-Size: 13
+Depends: easy-rsa
+Filename: ./ca_1.0-11_all.deb
+Size: 2764
+MD5sum: 46870dfdbdee653c95928d7ffcf5d0bb
+SHA1: ba62831dc8f3ddb15705a0f3de287a3d56112b5a
+SHA256: fbf72b7de02f4e58567508b7b9347ac9ba465c249248c31dcf8722e5fefaa7f2
+Section: utils
+Priority: optional
+Description: Easy-RSA CA management scripts
+ CA (Certificate Authority) management utility scripts to handle
+ PKI infrastructure. This package provides tools to manage the
+ certificate authority for local VPN or other security systems.
+
+Package: ca
+Version: 1.0-12
+Architecture: all
+Maintainer: Arina <sav2405@gmail.com>
+Installed-Size: 13
+Depends: easy-rsa
+Filename: ./ca_1.0-12_all.deb
+Size: 2786
+MD5sum: b0104dbf83c3737539aee05298153528
+SHA1: 8ca4f245f0d4bf30b0f1ae547b6b525feb620ccd
+SHA256: bd97aaf3a44a72910b71e60253c99607ea1c77a08d69e74dda40a86997b7fd93
+Section: utils
+Priority: optional
+Description: Easy-RSA CA management scripts
+ CA (Certificate Authority) management utility scripts to handle
+ PKI infrastructure. This package provides tools to manage the
+ certificate authority for local VPN or other security systems.
+
+Package: ca
+Version: 1.0-13
+Architecture: all
+Maintainer: Arina <sav2405@gmail.com>
+Installed-Size: 13
+Depends: easy-rsa
+Filename: ./ca_1.0-13_all.deb
+Size: 2790
+MD5sum: 0b88032b37ff394407529e36364f8a0a
+SHA1: 34d6d7fdb7bdc1a1a01bed47ad904a5a61779929
+SHA256: 261d299e5a517a016f25905b0e9403ec09b0b2c300f36857b393f32770a87b75
+Section: utils
+Priority: optional
+Description: Easy-RSA CA management scripts
+ CA (Certificate Authority) management utility scripts to handle
+ PKI infrastructure. This package provides tools to manage the
+ certificate authority for local VPN or other security systems.
+
+Package: ca
 Version: 1.0-3
 Architecture: all
 Maintainer: Arina <sav2405@gmail.com>
@@ -81,6 +153,42 @@ Size: 2732
 MD5sum: 5c183c753a4537924cd759d51b5c325b
 SHA1: fdea5f87e5cf59ae1522ab129e0e13a65edbf0b7
 SHA256: cd95ef30d5a58aa5e216cb09436745453df123ca15e75f0c853e2b322d7f9bb7
+Section: utils
+Priority: optional
+Description: Easy-RSA CA management scripts
+ CA (Certificate Authority) management utility scripts to handle
+ PKI infrastructure. This package provides tools to manage the
+ certificate authority for local VPN or other security systems.
+
+Package: ca
+Version: 1.0-8
+Architecture: all
+Maintainer: Arina <sav2405@gmail.com>
+Installed-Size: 13
+Depends: easy-rsa
+Filename: ./ca_1.0-8_all.deb
+Size: 2748
+MD5sum: 887b548ce625c1055fee44ea338734cb
+SHA1: 5866694b0e46ee633c392f8d2732bb1f6291d0e4
+SHA256: 3f841859f54a7bcc02c98b0909797003eabd994ffc4fd89a8bd38610257e5b86
+Section: utils
+Priority: optional
+Description: Easy-RSA CA management scripts
+ CA (Certificate Authority) management utility scripts to handle
+ PKI infrastructure. This package provides tools to manage the
+ certificate authority for local VPN or other security systems.
+
+Package: ca
+Version: 1.0-9
+Architecture: all
+Maintainer: Arina <sav2405@gmail.com>
+Installed-Size: 13
+Depends: easy-rsa
+Filename: ./ca_1.0-9_all.deb
+Size: 2754
+MD5sum: 8fff3c3d65accbe2240aa904f0b17555
+SHA1: 2467eeca85049b6bfaeb044cd48cd8b297ba774b
+SHA256: 2ac6ea207538c47d73a8c1ec9f745c2fb6b0f28f01c6f459a412868957cdd83b
 Section: utils
 Priority: optional
 Description: Easy-RSA CA management scripts
