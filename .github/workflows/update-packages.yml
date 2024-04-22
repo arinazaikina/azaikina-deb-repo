@@ -35,9 +35,9 @@ jobs:
 
     - name: Генерация и подписание файла Release
       run: |
-        apt-ftparchive release . > Release
+        apt-ftparchive release . | tee Release
         rm -f Release.gpg
-        gpg --batch --pinentry-mode loopback --default-key ${{ secrets.GPG_KEY_ID }} --output Release.gpg --detach-sign Release
+        gpg --batch --pinentry-mode loopback --armor --default-key ${{ secrets.GPG_KEY_ID }} --output Release.gpg --detach-sign Release
 
     - name: Фиксация изменений и публикация в репозиторий
       run: |
