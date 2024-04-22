@@ -1,4 +1,4 @@
-name: Update APT Repository
+name: Обновление APT репозитория
 
 on:
   push:
@@ -14,14 +14,37 @@ jobs:
     steps:
     - uses: actions/checkout@v2
 
-    - name: Setup Git config
+    - name: Настройка Git конфигурации
       run: |
         git config user.name "github-actions"
         git config user.email "github-actions@github.com"
 
-    - name: Generate Packages.gz
+    - name: Установка необходимых пакетов
+      run: sudo apt-get update && sudo apt-get install -y dpkg-dev apt-utils gnupg
+
+    - name: Импорт GPG ключа
       run: |
-        dpkg-scanpackages . /dev/null | gzip -9c > Packages  
-        git add Packages
-        git commit -m "Update Packages"
+        echo "${{ secrets.GPG_PRIVATE_KEY }}" | gpg --import
+
+    - name: Генерация и подписание файла Packages
+      run: |
+        dpkg-scanpackages --multiversion . > Packages
+        gpg --default-key ${{ secrets.GPG_KEY_ID }} --detach-sign -o Packages.gpg Packages
+        git add Packages Packages.gpg
+
+    - name: Генерация и подписание файла Release
+      run: |
+        apt-ftparchive release . > Release
+        gpg --default-key ${{ secrets.GPG_KEY_ID }} --detach-sign -o Release.gpg Release
+        git add Release Release.gpg
+
+    - name: Проверка наличия изменений
+      id: git-check
+      run: |
+        git diff --exit-code || echo "changes=yes" >> $GITHUB_ENV
+
+    - name: Коммит и пуш изменений, если они есть
+      if: env.changes == 'yes'
+      run: |
+        git commit -m "Обновление файлов Packages и Release"
         git push
