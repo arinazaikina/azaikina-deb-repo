@@ -29,13 +29,13 @@ jobs:
     - name: Генерация и подписание файла Packages
       run: |
         dpkg-scanpackages --multiversion . > Packages
-        gpg --default-key ${{ secrets.GPG_KEY_ID }} --detach-sign -o Packages.gpg Packages
+        gpg --batch --pinentry-mode loopback --default-key ${{ secrets.GPG_KEY_ID }} --detach-sign -o Packages.gpg Packages
         git add Packages Packages.gpg
 
     - name: Генерация и подписание файла Release
       run: |
         apt-ftparchive release . > Release
-        gpg --default-key ${{ secrets.GPG_KEY_ID }} --detach-sign -o Release.gpg Release
+        gpg --batch --pinentry-mode loopback --default-key ${{ secrets.GPG_KEY_ID }} --detach-sign -o Release.gpg Release
         git add Release Release.gpg
 
     - name: Проверка наличия изменений
