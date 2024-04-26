@@ -323,6 +323,21 @@ Priority: optional
 Description: This package installs scripts for configuring OpenVPN
 
 Package: vpn
+Version: 1.0-16
+Architecture: all
+Maintainer: Arina <sav2405@gmail.com>
+Installed-Size: 23
+Depends: easy-rsa, openvpn
+Filename: ./vpn_1.0-16_all.deb
+Size: 5082
+MD5sum: 3defeed0a83d18473dcc99590a51fbaf
+SHA1: 33ba6b272f0eeef2b68c82ce743b01c6737ab384
+SHA256: 367a936d6d235b52ff7139c214d616f8cbb9726dd1cd5b82254a4aaaeb8da62f
+Section: utils
+Priority: optional
+Description: This package installs scripts for configuring OpenVPN
+
+Package: vpn
 Version: 1.0-5
 Architecture: all
 Maintainer: Arina <sav2405@gmail.com>
