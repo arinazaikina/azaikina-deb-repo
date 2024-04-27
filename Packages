@@ -34,6 +34,24 @@ Description: Easy-RSA CA management scripts
  PKI infrastructure. This package provides tools to manage the
  certificate authority for local VPN or other security systems.
 
+Package: ca
+Version: 1.0-3
+Architecture: all
+Maintainer: Arina <sav2405@gmail.com>
+Installed-Size: 13
+Depends: easy-rsa
+Filename: ./ca_1.0-3_all.deb
+Size: 2696
+MD5sum: 79da50b903e3fecaa8dba70ad158c77c
+SHA1: fef40d72f5baf5d3c687ade741c739c8fcad7b43
+SHA256: a5d18c28b58d9b0954313832d6b9ba952f83f2d6b11df3769ffe43bad6306fc5
+Section: utils
+Priority: optional
+Description: Easy-RSA CA management scripts
+ CA (Certificate Authority) management utility scripts to handle
+ PKI infrastructure. This package provides tools to manage the
+ certificate authority for local VPN or other security systems.
+
 Package: vpn
 Version: 1.0-1
 Architecture: all
@@ -60,6 +78,21 @@ Size: 4818
 MD5sum: ec087cd050be8061478a5757bf0ba120
 SHA1: 71882cb9a0582b9f500626287c28c01351bc1531
 SHA256: 949df604b7dee9ea8f06e3ca18b939878ccb3c0a64394dc0a9bc71fa9bfe3acc
+Section: utils
+Priority: optional
+Description: This package installs scripts for configuring OpenVPN
+
+Package: vpn
+Version: 1.0-3
+Architecture: all
+Maintainer: Arina <sav2405@gmail.com>
+Installed-Size: 23
+Depends: easy-rsa, openvpn
+Filename: ./vpn_1.0-3_all.deb
+Size: 4824
+MD5sum: 21a5f340493a0b9532529bf54414775c
+SHA1: e69ee7a64a691f8b3aae78f32c8bbade5623788e
+SHA256: 34c55a3b9967588dadc99076bda5ae7dad9e193b88300e5d63f23dbea1631d1e
 Section: utils
 Priority: optional
 Description: This package installs scripts for configuring OpenVPN
