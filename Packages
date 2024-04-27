@@ -1,0 +1,33 @@
+Package: ca
+Version: 1.0-1
+Architecture: all
+Maintainer: Arina <sav2405@gmail.com>
+Installed-Size: 13
+Depends: easy-rsa
+Filename: ./ca_1.0-1_all.deb
+Size: 2676
+MD5sum: aad61f2037422f5fcb109fea72819476
+SHA1: bbb3f588afd44d46ed8126d59c4b8954c9bc74f5
+SHA256: 9ccb92f8dd637854b17a5d009e6814c86c56c6697728241cb13969d0fcfe36d4
+Section: utils
+Priority: optional
+Description: Easy-RSA CA management scripts
+ CA (Certificate Authority) management utility scripts to handle
+ PKI infrastructure. This package provides tools to manage the
+ certificate authority for local VPN or other security systems.
+
+Package: vpn
+Version: 1.0-1
+Architecture: all
+Maintainer: Arina <sav2405@gmail.com>
+Installed-Size: 23
+Depends: easy-rsa, openvpn
+Filename: ./vpn_1.0-1_all.deb
+Size: 4810
+MD5sum: db96ae5cb090e73965a98ef7c5ccf4ca
+SHA1: 1d848ceeb05ad9cd75cf21f3e5a74b9b82a1d76b
+SHA256: aa2ad4d818d6386fc790b2d74711a1457695a3e4d4c7028ef794724cd2c8766a
+Section: utils
+Priority: optional
+Description: This package installs scripts for configuring OpenVPN
+
